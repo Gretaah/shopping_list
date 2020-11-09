@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shopping List</title>
     <script type="text/javascript" src="assets/js/weather.js" defer></script>
-    <script type="text/javascript" src="assets/js/shopping.js" defer></script>
+    <script type="text/javascript" src="assets/js/list.js" defer></script>
+    <script type="text/javascript" src="assets/js/map.js" defer></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
@@ -23,11 +24,12 @@
                 <div class="shopping-frame">
                     <h2>Shopping List</h2>
                     <div class="form-container">
-                        <form action="/shopping-list" class="search-box" id="shopping-list">
-                            <input class="input-field" type="text" name="item" placeholder="Add Item...">
+                        <form action="/shopping-list" class="search-box" id="shoppingList">
+                            <input id="userInput" class="input-field" type="text" name="userInput"
+                                placeholder="Add Item...">
                             <button class="submit-button">Submit</button>
                         </form>
-                        <ul id="item">
+                        <ul id="listItems">
                             <li>Bread</li>
                             <li>Salt</li>
                             <li>Ginger</li>

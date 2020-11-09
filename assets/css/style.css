@@ -1,0 +1,93 @@
+/* ------------------------------------ General ---------------------------- */
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #264653;
+}
+
+.input-field {
+    padding: 0.6em 0.6em;
+    margin-right: -2.44em;
+    border: none;
+    border-radius: 48px 48px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid #333;
+    color: #313131;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+    outline: none;
+}
+
+.submit-button {
+    background-color: #f4a261;
+    padding: 0.6em 0.6em;
+    margin-left: -2.0em;
+    border: none;
+    border-radius: 48px 48px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #black;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+    outline: none;
+}
+
+/* ------------------------------------ Shopping List ---------------------------- */
+
+.shopping-frame {
+    width: fit-content;
+    background-color: #f4a261;
+    border-radius: 48px 48px;
+    text-align: center;
+    padding: 1em;
+}
+
+
+.shopping-frame h2 {
+    font-size: 2em;
+    color: #efefef;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.shopping-frame li {
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.search-box input:focus {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ------------------------------------ Locate Store ---------------------------- */
+
+.locate-store-container {
+    padding: 2em;
+}
+
+.locate-store-frame {
+    width: fit-content;
+    background-color: #e9c46a;
+    border-radius: 48px 48px;
+    text-align: center;
+    padding: 1em;
+}
+
+/* ------------------------------------ Weather ---------------------------- */
+
+.weather-container {
+    padding: 2em;
+}
+
+.weather-frame {
+    width: fit-content;
+    background-color: #2a9d8f;
+    border-radius: 48px 48px;
+    text-align: center;
+    padding: 1em;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping List</title>
+    <script type="text/javascript" src="assets/js/weather.js" defer></script>
+    <script type="text/javascript" src="assets/js/shopping.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-container columns is-centered">
+            <div class=" weather-frame">
+                <h1>Weather Info</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="shopping-list-container columns is-centered">
+                <div class="shopping-frame">
+                    <h2>Shopping List</h2>
+                    <div class="form-container">
+                        <form action="/shopping-list" class="search-box" id="shopping-list">
+                            <input class="input-field" type="text" name="item" placeholder="Add Item...">
+                            <button class="submit-button">Submit</button>
+                        </form>
+                        <ul id="item">
+                            <li>Bread</li>
+                            <li>Salt</li>
+                            <li>Ginger</li>
+                            <li>Tea</li>
+                            <li>Rice</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="locate-store-container columns is-centered">
+                <div class="locate-store-frame">
+                    <h1>Locate Store</h1>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

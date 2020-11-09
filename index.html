@@ -29,7 +29,7 @@
                     <div class="form-container">
                         <form action="/shopping-list" class="search-box" id="shoppingList">
                             <input id="userInput" class="input-field" type="text" name="userInput"
-                                placeholder="Add Item...">
+                                placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}">
                             <button class="submit-button">Submit</button>
                         </form>
                         <ul id="listItems">

@@ -7,7 +7,7 @@ body {
 }
 
 .input-field {
-    width: fit-content;
+    width: 13em;
     padding: 0.6em 0.6em;
     margin-right: -2.44em;
     border: none;
@@ -19,6 +19,7 @@ body {
     font-weight: 300;
     transition: 0.2s ease-out;
     outline: none;
+    z-index: -1;
 }
 
 .submit-button {
@@ -32,6 +33,7 @@ body {
     font-weight: 300;
     transition: 0.2s ease-out;
     outline: none;
+    z-index: 2;
 }
 
 .submit-button:hover {
@@ -59,7 +61,8 @@ body {
 
 
 .shopping-frame h2 {
-    font-size: 2em;
+    text-shadow: 2px 2px black;
+    font-size: 2.2em;
     color: #efefef;
     font-weight: 600;
     margin-bottom: 0.5em;
@@ -79,6 +82,7 @@ body {
 #listItems li {
     text-align: left;
     margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 #listItems li button {
@@ -123,6 +127,14 @@ body {
     padding: 1em;
 }
 
+.locate-store-frame h2 {
+    text-shadow: 2px 2px black;
+    font-size: 2em;
+    color: #efefef;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
 /* ------------------------------------ Weather ---------------------------- */
 
 .weather-container {
@@ -135,4 +147,25 @@ body {
     border-radius: 48px 48px;
     text-align: center;
     padding: 1em;
+}
+
+.weather-frame h2 {
+    text-shadow: 2px 2px black;
+    font-size: 2.5em;
+    color: #efefef;
+    font-weight: 600;
+}
+
+.temp {
+    text-shadow: 2px 2px #232b2b;
+    font-size: 5em;
+    color: #efefef;
+    font-weight: 700;
+}
+
+.condition {
+    font-size: 1.5em;
+    text-shadow: 2px 2px #232b2b;
+    color: #efefef;
+    font-weight: 700;
 }

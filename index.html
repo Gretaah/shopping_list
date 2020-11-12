@@ -19,7 +19,11 @@
     <div class="container">
         <div class="weather-container columns is-centered">
             <div class=" weather-frame">
-                <h1>Weather Info</h1>
+                <div class="city">
+                    <h2>Hamburg,DE</h2>
+                </div>
+                <div class="temp">15<span>°c</span></div>
+                <div class="condition">Sunny</div>
             </div>
         </div>
         <div class="container">
@@ -29,7 +33,8 @@
                     <div class="form-container">
                         <form action="/shopping-list" class="search-box" id="shoppingList">
                             <input id="userInput" class="input-field" type="text" name="userInput"
-                                placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}">
+                                placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}"
+                                maxlength="15" size="4">
                             <button class="submit-button">Submit</button>
                         </form>
                         <ul id="listItems">
@@ -41,7 +46,7 @@
         <div class="container">
             <div class="locate-store-container columns is-centered">
                 <div class="locate-store-frame">
-                    <h1>Locate Store</h1>
+                    <h2>Locate Store</h2>
                 </div>
             </div>
         </div>

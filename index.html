@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shopping List</title>
+    <script type="text/javascript" src="assets/js/geolocation.js" defer></script>
     <script type="text/javascript" src="assets/js/weather.js" defer></script>
     <script type="text/javascript" src="assets/js/list.js" defer></script>
     <script type="text/javascript" src="assets/js/map.js" defer></script>
@@ -18,12 +19,19 @@
 <body>
     <div class="container">
         <div class="weather-container columns is-centered">
-            <div class=" weather-frame">
+            <div class="weather-frame">
+                <div>
+                    <p class="time">15.00</p>
+                </div>
                 <div class="city">
                     <h2>Hamburg,DE</h2>
                 </div>
-                <div class="temp">15<span>°c</span></div>
-                <div class="condition">Sunny</div>
+                <div>
+                    <p class="temp">15<span>°c</span></p>
+                </div>
+                <div class="condition">
+                    <img src="assets/icons/OpenWeatherMap/200.svg" alt="Weather Condition Icon">
+                </div>
             </div>
         </div>
         <div class="container">

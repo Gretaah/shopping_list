@@ -158,7 +158,14 @@ body {
 
 .temp {
     text-shadow: 2px 2px #232b2b;
-    font-size: 5em;
+    font-size: 4em;
+    color: #efefef;
+    font-weight: 700;
+}
+
+.time {
+    text-shadow: 2px 2px #232b2b;
+    font-size: 1em;
     color: #efefef;
     font-weight: 700;
 }

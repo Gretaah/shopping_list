@@ -1,15 +1,18 @@
 let lat = 0;
-let lon = 0;
+let long = 0;
+navigator.geolocation.getCurrentPosition(succes, error);
 
-function locationSuccess(position) {
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
+function succes(position) {
+    long = position.coords.longitude;
+    lat = position.coords.latitude;
+    geolocation();
 }
 
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
-        console.log(lat, lon)
-    });
+function error(err) {
+    console.warn(err.code + ': ' + err.message);
+}
+
+function geolocation() {
+    console.log(lat);
+    console.log(long);
 }

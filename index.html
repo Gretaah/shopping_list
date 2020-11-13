@@ -32,6 +32,11 @@
                 <div class="condition">
                     <img src="assets/icons/OpenWeatherMap/200.svg" alt="Weather Condition Icon">
                 </div>
+                <form action="/weather" class="search-box" id="weather-form">
+                    <input id="userWeatherInput" class="input-field" type="text" name="weatherInput"
+                        placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="15">
+                    <button class="weather-button">Submit</button>
+                </form>
             </div>
         </div>
         <div class="container">
@@ -42,7 +47,7 @@
                         <form action="/shopping-list" class="search-box" id="shoppingList">
                             <input id="userInput" class="input-field" type="text" name="userInput"
                                 placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}"
-                                maxlength="15" size="4">
+                                maxlength="15">
                             <button class="submit-button">Submit</button>
                         </form>
                         <ul id="listItems">

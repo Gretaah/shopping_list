@@ -3,9 +3,15 @@ const api = {
     baseurl: "https://api.openweathermap.org/data/2.5/"
 }
 
+const weatherForm = document.querySelector('#weather-form')
+const submitBtn = document.querySelector('#weather-button');
+const weatherInput = document.getElementById("userWeatherInput");
+
+// Get weather data from geolocation 
+
 let openWeatherMapData = {}
 let xhr = new XMLHttpRequest();
-xhr.open('GET', `${api.baseurl}weather?lat=${lat}&lon=${lon}&appid=${api.key}&units=metric`);
+xhr.open('GET', `${api.baseurl}weather?lat=${lat}&lon=${long}&appid=${api.key}&units=metric`);
 xhr.responseType = 'text';
 
 xhr.addEventListener('load', function () {
@@ -17,6 +23,31 @@ xhr.addEventListener('load', function () {
     }
 }, false);
 
+// Get weather data from submit form
+
+weatherForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(weatherInput.value)
+});
+
+const getData = () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `${api.baseurl}weather?q=${weatherInput.value}&appid=${api.key}&units=metric`);
+
+    xhr.responseType = 'text';
+
+    xhr.onload = () => {
+        openWeatherMapData = JSON.parse(xhr.responseText);
+        weatherInfo()
+        weatherInput.value = '';
+    }
+
+    xhr.send();
+}
+
+weatherForm.addEventListener('submit', getData);
+
+// Update inner html with weather data 
 
 function weatherInfo() {
     const city = openWeatherMapData.name;

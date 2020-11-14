@@ -9,6 +9,7 @@
     <script type="text/javascript" src="assets/js/weather.js" defer></script>
     <script type="text/javascript" src="assets/js/list.js" defer></script>
     <script type="text/javascript" src="assets/js/map.js" defer></script>
+    <script type="text/javascript" src="assets/js/time.js" defer></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
@@ -21,7 +22,11 @@
         <div class="weather-container columns is-centered">
             <div class="weather-frame">
                 <div>
-                    <p class="time">15.00</p>
+                    <div id="time">
+                        <span id="hrs">12</span>
+                        <span id="min">09</span>
+                        <span id="sec">14</span>
+                    </div>
                 </div>
                 <div class="city">
                     <h2>Hamburg,DE</h2>
@@ -35,7 +40,7 @@
                 <form action="/weather" class="search-box" id="weather-form">
                     <input id="userWeatherInput" class="input-field" type="text" name="weatherInput"
                         placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="15">
-                    <button class="weather-button">Submit</button>
+                    <button id="submit-btn" class="weather-button">Submit</button>
                 </form>
             </div>
         </div>
@@ -48,7 +53,7 @@
                             <input id="userInput" class="input-field" type="text" name="userInput"
                                 placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}"
                                 maxlength="15">
-                            <button class="submit-button">Submit</button>
+                            <button id="submit-btn" class="submit-button">Submit</button>
                         </form>
                         <ul id="listItems">
                         </ul>

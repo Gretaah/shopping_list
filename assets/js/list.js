@@ -1,6 +1,7 @@
 const shoppingList = document.querySelector("#shoppingList");
 const listItems = document.querySelector("#listItems");
 
+// User input for new list item
 
 shoppingList.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -8,6 +9,8 @@ shoppingList.addEventListener("submit", function (e) {
     newListitem(userInput.value);
     userInput.value = "";
 });
+
+// Create new list item 
 
 const newListitem = (userInput) => {
     const newListItem = document.createElement("li");
@@ -18,6 +21,8 @@ const newListitem = (userInput) => {
     newListItem.append(`${userInput}`);
     listItems.append(newListItem);
 }
+
+// Remove item from list
 
 $(document).on("click", ".delBtn", function () {
     $(this).parent().remove();

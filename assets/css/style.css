@@ -114,10 +114,6 @@ body {
 
 /* ------------------------------------ Weather ---------------------------- */
 
-.weather-container {
-    padding: 2em;
-}
-
 .weather-frame {
     width: fit-content;
     background-color: #2a9d8f;

@@ -79,6 +79,7 @@ body {
 }
 
 #listItems li {
+    list-style-type: none;
     text-align: left;
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -119,6 +120,7 @@ body {
     background-color: #2a9d8f;
     border-radius: 48px 48px;
     text-align: center;
+    margin: 2em;
     padding: 1em;
 }
 
@@ -153,9 +155,8 @@ body {
 /* ------------------------------------ Map ---------------------------- */
 
 #map {
-    height: 75%;
-    width: 50%;
+    width: 80%;
     margin: 2em;
-    padding: 12em;
+    padding: 14em;
     border-radius: 45px 45px;
 }

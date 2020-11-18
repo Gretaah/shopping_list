@@ -2,64 +2,73 @@
 <html>
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shopping List</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB0M7xWUqSD7QEymp8zw48zSY8HmsRxFQ&callback=initMap"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB0M7xWUqSD7QEymp8zw48zSY8HmsRxFQ&libraries=places&callback=initMap"
         type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
         integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/map.js"></script>
-    <script type="text/javascript" src="assets/js/geolocation.js"></script>
-    <script type="text/javascript" src="assets/js/list.js"></script>
-    <script type="text/javascript" src="assets/js/time.js"></script>
-    <script type="text/javascript" src="assets/js/weather.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
-    <div class="weather-frame">
-        <div>
-            <div id="time">
-                <span id="hrs">12</span>
-                <span id="min">09</span>
-                <span id="sec">14</span>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="map"></div>
             </div>
         </div>
-        <div class="city">
-            <h2>Hamburg,DE</h2>
+        <div class="row">
+            <div class="col col-lg-6 col-sm-12">
+                <div class="weather-frame">
+                    <div id="time">
+                        <span id="hrs">12</span>
+                        <span id="min">09</span>
+                        <span id="sec">14</span>
+                    </div>
+                    <div class="city">
+                        <h2>Hamburg,DE</h2>
+                    </div>
+                    <div class="temp">15<span>°c</span></div>
+                    <div class="condition">
+                        <img src="assets/icons/OpenWeatherMap/200.svg" alt="Weather Condition Icon">
+                    </div>
+                    <form action="/weather" class="search-box" id="weather-form">
+                        <input id="userWeatherInput" class="input-field" type="text" name="weatherInput"
+                            placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="15">
+                        <button id="submit-btn" class="weather-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col col-lg-6 col-sm-12">
+                <div class="shopping-frame">
+                    <h2>Shopping List</h2>
+                    <div class="form-container">
+                        <form action="/shopping-list" class="search-box" id="shoppingList">
+                            <input id="userInput" class="input-field" type="text" name="userInput"
+                                placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}"
+                                maxlength="15">
+                            <button id="submit-btn" class="submit-button">Submit</button>
+                        </form>
+                        <ul id="listItems">
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <p class="temp">15<span>°c</span></p>
-        </div>
-        <div class="condition">
-            <img src="assets/icons/OpenWeatherMap/200.svg" alt="Weather Condition Icon">
-        </div>
-        <form action="/weather" class="search-box" id="weather-form">
-            <input id="userWeatherInput" class="input-field" type="text" name="weatherInput" placeholder="Location..."
-                required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="15">
-            <button id="submit-btn" class="weather-button">Submit</button>
-        </form>
     </div>
-
-    <div class="shopping-frame">
-        <h2>Shopping List</h2>
-        <div class="form-container">
-            <form action="/shopping-list" class="search-box" id="shoppingList">
-                <input id="userInput" class="input-field" type="text" name="userInput" placeholder="Add Item..."
-                    required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="15">
-                <button id="submit-btn" class="submit-button">Submit</button>
-            </form>
-            <ul id="listItems">
-            </ul>
-        </div>
-    </div>
-
-    <div id="map"></div>
+    <script type="text/javascript" src="assets/js/geolocation.js"></script>
+    <script type="text/javascript" src="assets/js/map.js"></script>
+    <script type="text/javascript" src="assets/js/list.js"></script>
+    <script type="text/javascript" src="assets/js/time.js"></script>
+    <script type="text/javascript" src="assets/js/weather.js"></script>
 </body>
 
 </html>

@@ -21,4 +21,4 @@ function time() {
     document.querySelector('#sec').innerHTML = ": " + seconds;
 }
 
-setInterval(time, 100);
+setInterval(time, 1000);

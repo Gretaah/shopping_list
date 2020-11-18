@@ -27,7 +27,6 @@ xhr.addEventListener('load', function () {
 
 weatherForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log(weatherInput.value)
 });
 
 const getData = () => {
@@ -53,7 +52,6 @@ function weatherInfo() {
     const city = openWeatherMapData.name;
     const temperature = openWeatherMapData.main.temp;
     const icon = openWeatherMapData.weather[0].id;
-    console.log(`${icon}`)
     const location = document.querySelector(".city");
     const temp = document.querySelector(".temp");
     const condition = document.querySelector(".condition");

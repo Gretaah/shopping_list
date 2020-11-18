@@ -1,6 +1,10 @@
 let lat = 0;
 let long = 0;
-navigator.geolocation.getCurrentPosition(succes, error);
+navigator.geolocation.getCurrentPosition(succes, error, {
+    timeout: 10000
+});
+
+
 
 function succes(position) {
     long = position.coords.longitude;

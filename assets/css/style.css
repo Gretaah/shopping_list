@@ -1,8 +1,6 @@
 /* ------------------------------------ General ---------------------------- */
 html,
 body {
-    margin: 0;
-    height: 100%;
     background-color: #264653;
 }
 
@@ -70,7 +68,7 @@ body {
 }
 
 .shopping-frame li {
-    font-size: 24px;
+    font-size: 1.2em;
     color: #efefef;
     font-weight: 600;
     margin-top: 1em;
@@ -114,28 +112,6 @@ body {
     float: right;
 }
 
-/* ------------------------------------ Locate Store ---------------------------- */
-
-.locate-store-container {
-    padding: 2em;
-}
-
-.locate-store-frame {
-    width: fit-content;
-    background-color: #e9c46a;
-    border-radius: 48px 48px;
-    text-align: center;
-    padding: 1em;
-}
-
-.locate-store-frame h2 {
-    text-shadow: 2px 2px black;
-    font-size: 2em;
-    color: #efefef;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-}
-
 /* ------------------------------------ Weather ---------------------------- */
 
 .weather-container {
@@ -176,4 +152,14 @@ body {
     text-shadow: 2px 2px #232b2b;
     color: #efefef;
     font-weight: 700;
+}
+
+/* ------------------------------------ Map ---------------------------- */
+
+#map {
+    height: 75%;
+    width: 50%;
+    margin: 2em;
+    padding: 12em;
+    border-radius: 45px 45px;
 }

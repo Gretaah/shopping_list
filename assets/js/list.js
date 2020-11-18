@@ -15,8 +15,11 @@ shoppingList.addEventListener("submit", function (e) {
 const newListitem = (userInput) => {
     const newListItem = document.createElement("li");
     const delBtn = document.createElement("BUTTON");
-    delBtn.innerHTML = "Delete";
+    const plusBtn = document.createElement("BUTTON");
+    const minusBtn = document.createElement("BUTTON");
+    const displayCounter = document.createElement("h3");
     delBtn.className = "delBtn";
+    delBtn.innerHTML = "Delete";
     newListItem.append(delBtn);
     newListItem.append(`${userInput}`);
     listItems.append(newListItem);

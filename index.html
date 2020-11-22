@@ -19,14 +19,30 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-brand navbar-style"><a href="index.html">Shopping List</a></nav>
     <div class="container">
         <div class="row">
             <div class="col">
-                <div id="map"></div>
+                <div class="map" id="map"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col col-lg-6 col-sm-12">
+            <div class="col col-lg-6 col-md-6 col-sm-12">
+                <div class="shopping-frame">
+                    <h2>Shopping List</h2>
+                    <div class="form-container">
+                        <form action="/shopping-list" class="search-box" id="shoppingList">
+                            <input id="userInput" class="input-field" type="text" name="userInput"
+                                placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}"
+                                maxlength="12">
+                            <button id="submit-btn" class="submit-button">Submit</button>
+                        </form>
+                        <ul id="listItems">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-6 col-md-6 col-sm-12">
                 <div class="weather-frame">
                     <div id="time">
                         <span id="hrs">12</span>
@@ -42,24 +58,9 @@
                     </div>
                     <form action="/weather" class="search-box" id="weather-form">
                         <input id="userWeatherInput" class="input-field" type="text" name="weatherInput"
-                            placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="15">
+                            placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="12">
                         <button id="submit-btn" class="weather-button">Submit</button>
                     </form>
-                </div>
-            </div>
-            <div class="col col-lg-6 col-sm-12">
-                <div class="shopping-frame">
-                    <h2>Shopping List</h2>
-                    <div class="form-container">
-                        <form action="/shopping-list" class="search-box" id="shoppingList">
-                            <input id="userInput" class="input-field" type="text" name="userInput"
-                                placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}"
-                                maxlength="15">
-                            <button id="submit-btn" class="submit-button">Submit</button>
-                        </form>
-                        <ul id="listItems">
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

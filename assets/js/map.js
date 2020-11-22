@@ -1,5 +1,7 @@
 let map, service, infowindow, pos, request, place;
 
+// Create new map on page
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         minZoom: 12
@@ -17,8 +19,9 @@ function initMap() {
     // callback();
 }
 
+// Get location
+
 function getLocation() {
-    // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             pos = {
@@ -32,7 +35,7 @@ function getLocation() {
                 icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
             })
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('Your location.');
             infoWindow.open(map);
             map.setCenter(pos);
             getNearByPlaces(pos);
@@ -48,6 +51,8 @@ function getLocation() {
 
     infowindow = new google.maps.InfoWindow();
 }
+
+// Show places nearby 
 
 function getNearByPlaces(pos) {
     console.log("getNearByPlaces:" + pos.lat + "," + pos.lng);

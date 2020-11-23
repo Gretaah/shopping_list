@@ -1,16 +1,9 @@
 /* ------------------------------------ General ---------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 body {
     background-color: #264653;
-}
-
-.navbar-style {
-    background-color: #264653;
-}
-
-.navbar-style a {
-    text-decoration: none;
-    color: black;
 }
 
 .input-field {
@@ -54,6 +47,47 @@ body {
     font-weight: 300;
     transition: 0.2s ease-out;
     outline: none;
+}
+
+/* ------------------------------------ Navbar ------------------------------------*/
+
+.navbar-style {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    background-color: #264653;
+    border-bottom: 0.2px solid #efefef;
+}
+
+.navbar-style a {
+    text-decoration: none;
+    color: #efefef;
+}
+
+.navbar-style a:hover {
+    color: rgba(123, 239, 178, 0.7);
+}
+
+/* ------------------------------------ Footer ------------------------------------*/
+
+.footer {
+    font-size: 2em;
+    background-color: #264653;
+}
+
+.links {
+    float: right;
+    border-top: 0.2px solid #efefef;
+}
+
+.links a {
+    color: #efefef;
+    font-size: 1.6em;
+    text-decoration: none;
+    margin: 0.5em;
+}
+
+.links a:hover {
+    color: rgba(123, 239, 178, 0.7);
 }
 
 /* ------------------------------------ Shopping List ---------------------------- */
@@ -184,8 +218,15 @@ body {
 
 @media screen and (max-width: 764px) {
     .map {
-        width: 60%;
-        padding: 9em;
+        width: 50%;
+        padding: 8em;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .map {
+        width: 50%;
+        padding: 8em;
     }
 }
 

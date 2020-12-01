@@ -110,6 +110,12 @@ I used [coolors.co](https://coolors.co/) to pick what colours to pick for my pag
 
 <br/>
 
+[Mobile wireframe](https://github.com/Gretaah/shopping_list/blob/main/assets/wireframes/mobile.png)
+
+<br/>
+
+[Desktop wireframe](https://github.com/Gretaah/shopping_list/blob/main/assets/wireframes/desktop.png)
+
 <br/>
 
 ## Technologies Used

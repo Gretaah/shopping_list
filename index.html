@@ -62,7 +62,7 @@
                   </div>
                   <form action="/weather" class="search-box" id="weather-form">
                      <input id="userWeatherInput" class="input-field" type="text" name="weatherInput"
-                        placeholder="Location..." required="required" pattern="[a-zA-ZäöüÄÖÜß]{1,}" maxlength="12">
+                        placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="12">
                      <button class="weather-button submit-btn">Submit</button>
                   </form>
                </div>

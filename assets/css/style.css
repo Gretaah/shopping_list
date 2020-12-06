@@ -206,6 +206,13 @@ body {
 }
 
 /* ------------------------------------ Media Queries ---------------------------- */
+
+@media screen and (max-width: 1024px) {
+    .map {
+        width: 85%;
+    }
+}
+ 
 @media screen and (max-width: 993px) {
     .input-field {
         width: 11em;
@@ -216,21 +223,29 @@ body {
     }
 }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 746px) {
+    .input-field {
+        width: 14em;
+    }
+
     .map {
-        width: 50%;
-        padding: 8em;
+        width: 60%;
+        padding: 10em;
     }
 }
 
-@media screen and (max-width: 596px) {
-    .map {
-        width: 50%;
-        padding: 8em;
+@media screen and (max-width: 406px) {
+    .input-field {
+        width: 13em;
     }
+
+    .map {
+        width: 60%;
+        padding: 9em;
+    }   
 }
 
-@media screen and (max-width: 347px) {
+@media screen and (max-width: 383px) {
     .input-field {
         width: 10em;
     }

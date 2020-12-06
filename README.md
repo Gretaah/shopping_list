@@ -2,7 +2,7 @@
 
 <br/>
 
-The goal of this site is to provide a basic shopping list and to display the current weather and a map so that you can prepare for your shopping. 
+The goal of this site is to provide a basic shopping list, a map and information about the current weather to help you prepare for your shopping.
 
 <br/>
 

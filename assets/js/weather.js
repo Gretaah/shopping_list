@@ -55,7 +55,7 @@ function getWeatherDataForCity(e) {
     xhr.send();
 }
 
-/* Update inner html with weather data. */
+/* Update inner html with weather data */
 function updateWeatherInfo() {
     const city = openWeatherMapData.name;
     const temperature = openWeatherMapData.main.temp;

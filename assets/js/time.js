@@ -1,3 +1,4 @@
+/* Function to get current time for the weather app*/ 
 function time() {
     const currentTime = new Date();
     let hours = currentTime.getHours();

@@ -1,5 +1,5 @@
 var currentLocation = {};
-
+/* Get geolocation for maps.js and weather.js */
 function success(position) {
     currentLocation.lng = position.coords.longitude;
     currentLocation.lat = position.coords.latitude;
@@ -20,7 +20,6 @@ function success(position) {
 function error(err) {
     alert("This app needs location to be enabled to work.");
 }
-
 
 $(document).ready(function () {
     function getLocation() {

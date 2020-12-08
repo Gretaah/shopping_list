@@ -7,7 +7,7 @@ const weatherForm = document.querySelector('#weather-form')
 const submitBtn = document.querySelector('#weather-button');
 const weatherInput = document.getElementById("userWeatherInput");
 
-// Get weather data from geolocation 
+/* Get weather data from geolocation */
 let openWeatherMapData = {}
 
 function getWeatherDataFromCurrentLocation() {
@@ -27,6 +27,7 @@ function getWeatherDataFromCurrentLocation() {
     xhr.send();
 }
 
+/* Get weather data from user input */
 function getWeatherDataForCity(e) {
     e.preventDefault();
     let xhr = new XMLHttpRequest();
@@ -42,8 +43,7 @@ function getWeatherDataForCity(e) {
     xhr.send();
 }
 
-
-/* Update inner html with weather data */
+/* Update inner html with weather data. */
 function updateWeatherInfo() {
     const city = openWeatherMapData.name;
     const temperature = openWeatherMapData.main.temp;

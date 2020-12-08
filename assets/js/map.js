@@ -1,6 +1,6 @@
 var map, service, infowindow, pos, request, place;
 
-// Berlin - Placeholder
+/* Placeholder for Berlin */
 var initialLocation = {
     lat: 52.5200,
     lng: 13.4050
@@ -24,7 +24,7 @@ function initMap() {
     updateMapAndGetNearbyLocations();
 }
 
-// Get location
+/* Get users location */
 function updateMapAndGetNearbyLocations() {
     console.log("getLocation:" + currentLocation.lat + "," + currentLocation.lng);
     let marker = new google.maps.Marker({
@@ -32,7 +32,7 @@ function updateMapAndGetNearbyLocations() {
         map: map,
         icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
     });
-    // Show the marker location and popup
+    /* Show the marker location and popup */
     infoWindow.setPosition(currentLocation);
     infoWindow.setContent('Your location.');
     infoWindow.open(map);
@@ -41,8 +41,7 @@ function updateMapAndGetNearbyLocations() {
     infowindow = new google.maps.InfoWindow();
 }
 
-// Show places nearby 
-
+/* Get nearby places information */
 function getNearByPlaces() {
     console.log("getNearByPlaces:" + currentLocation.lat + "," + currentLocation.lng);
     request = {
@@ -54,7 +53,7 @@ function getNearByPlaces() {
     service = new google.maps.places.PlacesService(map);
     service.textSearch(request, searchCallback);
 }
-
+/* Nearby places callback */
 function searchCallback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         console.log("callback received " + results.length + " results");
@@ -68,7 +67,7 @@ function searchCallback(results, status) {
         map.fitBounds(bounds);
     } else console.log("callback.status=" + status);
 }
-
+/* Handle errors */
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -77,6 +76,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
+/* Create markers for grocery stores */
 function createMarker(place) {
     let marker = new google.maps.Marker({
         map: map,

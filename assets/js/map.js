@@ -1,72 +1,61 @@
-let map, service, infowindow, pos, request, place;
+var map, service, infowindow, pos, request, place;
 
-// Create new map on page
+// Berlin - Placeholder
+var initialLocation = {
+    lat: 52.5200,
+    lng: 13.4050
+};
+var locationType = 'grocery';
+var searchRadius = 500;
 
+/* 
+Creates a new map on the page
+Fetches the user's location
+Executes search of nearby places
+*/
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         minZoom: 12
     }, {
-        center: {
-            lat: 52.5200,
-            lng: 13.4050
-        },
+        center: currentLocation,
         zoom: 18,
     });
     infoWindow = new google.maps.InfoWindow;
-
-    getLocation();
-    //getNearByPlaces();
-    // callback();
+    updateMapAndGetNearbyLocations();
 }
 
 // Get location
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            console.log("getLocation:" + pos.lat + "," + pos.lng);
-            let marker = new google.maps.Marker({
-                position: pos,
-                map: map,
-                icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
-            })
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Your location.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-            getNearByPlaces(pos);
-        }, function () {
-            console.log("calling handleLocationError(true)");
-            handleLocationError(true, infoWindow, map.getCenter());
-        });
-    } else {
-        // Browser doesn't support Geolocation
-        console.log("calling handleLocationError(false)")
-        handleLocationError(false, infoWindow, map.getCenter());
-    }
-
+function updateMapAndGetNearbyLocations() {
+    console.log("getLocation:" + currentLocation.lat + "," + currentLocation.lng);
+    let marker = new google.maps.Marker({
+        position: currentLocation,
+        map: map,
+        icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+    });
+    // Show the marker location and popup
+    infoWindow.setPosition(currentLocation);
+    infoWindow.setContent('Your location.');
+    infoWindow.open(map);
+    map.setCenter(currentLocation);
+    getNearByPlaces();
     infowindow = new google.maps.InfoWindow();
 }
 
 // Show places nearby 
 
-function getNearByPlaces(pos) {
-    console.log("getNearByPlaces:" + pos.lat + "," + pos.lng);
+function getNearByPlaces() {
+    console.log("getNearByPlaces:" + currentLocation.lat + "," + currentLocation.lng);
     request = {
-        location: pos,
-        radius: '500',
-        query: 'grocery'
+        location: currentLocation,
+        radius: searchRadius,
+        query: locationType
     };
 
     service = new google.maps.places.PlacesService(map);
-    service.textSearch(request, callback);
+    service.textSearch(request, searchCallback);
 }
 
-function callback(results, status) {
+function searchCallback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         console.log("callback received " + results.length + " results");
         let bounds = new google.maps.LatLngBounds();

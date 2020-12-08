@@ -1,22 +1,37 @@
-let lat = 0;
-let long = 0;
-navigator.geolocation.getCurrentPosition(succes, error, {
-    timeout: 10000
-});
+var currentLocation = {};
 
+function success(position) {
+    currentLocation.lng = position.coords.longitude;
+    currentLocation.lat = position.coords.latitude;
 
+    try {
+        initMap();
+    } catch (error) {
+        console.error(error);
+    }
 
-function succes(position) {
-    long = position.coords.longitude;
-    lat = position.coords.latitude;
-    geolocation();
+    try {
+        getWeatherDataFromCurrentLocation();
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function error(err) {
-    console.warn(err.code + ': ' + err.message);
+    alert("This app needs location to be enabled to work.");
 }
 
-function geolocation() {
-    console.log(lat);
-    console.log(long);
-}
+
+$(document).ready(function () {
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                success, error, {
+                    timeout: 10000
+                });
+        } else {
+            alert("This app needs location to be enabled to work.");
+        }
+    }
+    getLocation();
+});

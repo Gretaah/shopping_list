@@ -8,47 +8,43 @@ const submitBtn = document.querySelector('#weather-button');
 const weatherInput = document.getElementById("userWeatherInput");
 
 // Get weather data from geolocation 
-
 let openWeatherMapData = {}
-let xhr = new XMLHttpRequest();
-xhr.open('GET', `${api.baseurl}weather?lat=${lat}&lon=${long}&appid=${api.key}&units=metric`);
-xhr.responseType = 'text';
 
-xhr.addEventListener('load', function () {
-    if (xhr.status === 200) {
-        openWeatherMapData = JSON.parse(xhr.responseText);
-        weatherInfo()
-    } else {
-        alert('Error loading OpenWeatherMap!');
-    }
-}, false);
+function getWeatherDataFromCurrentLocation() {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', `${api.baseurl}weather?lat=${currentLocation.lat}&lon=${currentLocation.lng}&appid=${api.key}&units=metric`);
+    xhr.responseType = 'text';
 
-// Get weather data from submit form
+    xhr.addEventListener('load', function () {
+        if (xhr.status === 200) {
+            openWeatherMapData = JSON.parse(xhr.responseText);
+            updateWeatherInfo();
+        } else {
+            alert('Error loading OpenWeatherMap!');
+        }
+    }, false);
+    
+    xhr.send();
+}
 
-weatherForm.addEventListener('submit', function (e) {
+function getWeatherDataForCity(e) {
     e.preventDefault();
-});
-
-const getData = () => {
-    const xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('GET', `${api.baseurl}weather?q=${weatherInput.value}&appid=${api.key}&units=metric`);
 
     xhr.responseType = 'text';
 
     xhr.onload = () => {
         openWeatherMapData = JSON.parse(xhr.responseText);
-        weatherInfo()
+        updateWeatherInfo();
         weatherInput.value = '';
     }
-
     xhr.send();
 }
 
-weatherForm.addEventListener('submit', getData);
 
-// Update inner html with weather data 
-
-function weatherInfo() {
+/* Update inner html with weather data */
+function updateWeatherInfo() {
     const city = openWeatherMapData.name;
     const temperature = openWeatherMapData.main.temp;
     const icon = openWeatherMapData.weather[0].id;
@@ -60,4 +56,4 @@ function weatherInfo() {
     condition.innerHTML = `<img src="assets/icons/OpenWeatherMap/${icon}.svg">`;
 }
 
-xhr.send()
+weatherForm.addEventListener('submit', getWeatherDataForCity);

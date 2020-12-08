@@ -216,7 +216,8 @@ I made the following steps in deploying my site:
 
 <br/>
 
-I also deployed the site to my own domain by simply loggin in to the ftp account connected to it and transfared the files from my disk.
+I also deployed the site to [my own domain](https://tommybratt.se/)  by simply loggin in to the ftp account connected to it and transfared the files from my disk.
+
 
 <br/>
 

@@ -6,7 +6,10 @@ const api = {
 const weatherForm = document.querySelector('#weather-form')
 const submitBtn = document.querySelector('#weather-button');
 const weatherInput = document.getElementById("userWeatherInput");
-
+/* query selectors for error handling */
+const locationError = document.querySelector(".city");
+const conditionError = document.querySelector(".condition");
+const tempError = document.querySelector(".temp");
 /* Get weather data from geolocation */
 let openWeatherMapData = {}
 
@@ -36,9 +39,18 @@ function getWeatherDataForCity(e) {
     xhr.responseType = 'text';
 
     xhr.onload = () => {
-        openWeatherMapData = JSON.parse(xhr.responseText);
-        updateWeatherInfo();
-        weatherInput.value = '';
+        /* Place not found error handling */
+        if (xhr.status === 200) {
+            openWeatherMapData = JSON.parse(xhr.responseText);
+            updateWeatherInfo();
+            weatherInput.value = '';
+        } else if (xhr.status === 404){
+            locationError.innerHTML = `<h2>Not Found!</h2>`;
+            tempError.innerHTML = `<img src="assets/icons/OpenWeatherMap/null.svg">`;
+            conditionError.innerHTML = `<img src="assets/icons/OpenWeatherMap/null.svg">`;
+        } else {
+            alert('Error loading OpenWeatherMap!'); 
+        }
     }
     xhr.send();
 }

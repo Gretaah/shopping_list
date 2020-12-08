@@ -6,7 +6,7 @@ const api = {
 const weatherForm = document.querySelector('#weather-form')
 const submitBtn = document.querySelector('#weather-button');
 const weatherInput = document.getElementById("userWeatherInput");
-/* query selectors for error handling */
+/* Query selectors for error handling */
 const locationError = document.querySelector(".city");
 const conditionError = document.querySelector(".condition");
 const tempError = document.querySelector(".temp");

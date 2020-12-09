@@ -207,7 +207,7 @@ body {
 
 /* ------------------------------------ Media Queries ---------------------------- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .map {
         width: 85%;
     }
@@ -223,18 +223,19 @@ body {
     }
 }
 
-@media screen and (max-width: 746px) {
+@media screen and (max-width: 766px) {
     .input-field {
-        width: 14em;
+        width: 18rem;
     }
 
     .map {
-        width: 60%;
+        width: 65%;
         padding: 10em;
     }
 }
 
-@media screen and (max-width: 406px) {
+
+@media screen and (max-width: 413px) {
     .input-field {
         width: 13em;
     }

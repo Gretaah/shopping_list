@@ -111,10 +111,10 @@ body {
 }
 
 .shopping-frame li {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #efefef;
     font-weight: 600;
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .search-box input:focus {
@@ -123,9 +123,6 @@ body {
 
 #listItems li {
     list-style-type: none;
-    text-align: left;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
 }
 
 #listItems li button {

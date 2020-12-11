@@ -17,9 +17,9 @@ function time() {
         seconds = "0" + seconds;
     }
 
-    document.querySelector('#hrs').innerHTML = hours;
-    document.querySelector('#min').innerHTML = ": " + minutes;
-    document.querySelector('#sec').innerHTML = ": " + seconds;
+    document.querySelector('.hrs').innerHTML = hours;
+    document.querySelector('.min').innerHTML = ": " + minutes;
+    document.querySelector('.sec').innerHTML = ": " + seconds;
 }
 
 setInterval(time, 1000);

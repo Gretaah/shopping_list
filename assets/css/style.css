@@ -178,7 +178,7 @@ body {
     font-weight: 700;
 }
 
-#time {
+.time {
     text-shadow: 2px 2px #232b2b;
     font-size: 1.5em;
     color: #efefef;

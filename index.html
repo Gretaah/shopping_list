@@ -50,7 +50,7 @@
                </div>
                <form action="/weather" class="search-box" id="weather-form">
                   <input id="userWeatherInput" class="input-field" type="text" name="weatherInput"
-                     placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}">
+                     placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="20">
                   <button class="weather-button submit-btn">Submit</button>
                </form>
             </div>
@@ -62,7 +62,7 @@
                   <div class="form-container">
                      <form action="/shopping-list" class="search-box" id="shoppingList">
                         <input id="userInput" class="input-field" type="text" name="userInput"
-                           placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}">
+                           placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="20">
                         <button class="submit-button submit-btn">Submit</button>
                      </form>
                      <ul id="listItems">

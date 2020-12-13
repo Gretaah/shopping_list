@@ -222,7 +222,7 @@ I put my files trough an online validator and received some errors in my html fi
 
 <br/>
 
-* I got many warnings about unused variables but I believe all of them is ued by the google api so I let them be. 
+* I got many warnings about unused variables but I believe they are used by the google api so I let them be. 
 
 <br/>
 
@@ -326,7 +326,7 @@ I noticed that the fit-content property did not work in FireFox during testing s
 
 <br/>
 
-I do not have access to the Safari and Edge browsers because I'm on Linux but I did a google search to see if the fit-content property is supported and it is.
+I do not have access to the Safari or Edge browsers because I'm on Linux but I did a google search to see if the fit-content property is supported and it is.
 
 <br/>
 

@@ -192,7 +192,7 @@ I put my files trough an online validator and received some errors in my html fi
 
 <br/>
 
-* I added a missing semicolon on line 39
+* I added a missing semicolon on line 39.
 
 * It complained about one undefined variable but this is actually jQuery code.
 
@@ -308,6 +308,8 @@ After looking in the JavaScript console I noticed a warning about a request to a
 
 * It says that users are mistrustful of or confused by sites that request their location without context and that I should consider tying the request to a user action instead. This is something I might implement in the future but I think it is fine as it is for now because of the type of users that will access my site are more advanced on this topic than a regular person.
 
+* When I tested the site in the wc3 validation tools a last time it gave me warning about some of the tags I added because of lighthouse, so I removed them again.
+
 <br/>
 
 ### Links 
@@ -390,6 +392,10 @@ I got the weather icons from [Rick Ellis GitHub](https://github.com/rickellis/SV
 <br/>
 
 ### Acknowledgements
+
+<br/>
+
+Much of the code in the map function comes directly from the documentation google provided and I have just changed it to fit my needs.
 
 <br/>
 

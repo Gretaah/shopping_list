@@ -174,7 +174,7 @@ I put my files trough an online validator and received some errors in my html fi
 
 <br/>
 
-### Weather
+#### Weather
 
 <br/>
 
@@ -188,7 +188,7 @@ I put my files trough an online validator and received some errors in my html fi
 
 <br/>
 
-### List 
+#### List 
 
 <br/>
 
@@ -198,7 +198,7 @@ I put my files trough an online validator and received some errors in my html fi
 
 <br/>
 
-### Time
+#### Time
 
 <br/>
 
@@ -206,7 +206,7 @@ I put my files trough an online validator and received some errors in my html fi
 
 <br/>
 
-### Geolocation
+#### Geolocation
 
 <br/>
 
@@ -218,7 +218,7 @@ I put my files trough an online validator and received some errors in my html fi
 
 <br/>
 
-### Map
+#### Map
 
 <br/>
 
@@ -268,7 +268,7 @@ I also noticed some element behind my transparent submit buttons on the deployed
 
 <br/>
 
-### Geolocation
+#### Geolocation
 
 <br/>
 
@@ -373,7 +373,7 @@ I made the following steps in deploying my site:
 
 * Navigate to the unzipped folder.
 
-* double klick on index.html to start the file in your browser.
+* double click on index.html to start the file in your browser.
 
 <br/>
 

@@ -4,7 +4,7 @@ const api = {
 }
 
 const weatherForm = document.querySelector('#weather-form')
-const submitBtn = document.querySelector('#weather-button');
+
 const weatherInput = document.getElementById("userWeatherInput");
 /* Query selectors for error handling */
 const locationError = document.querySelector(".city");
@@ -46,8 +46,8 @@ function getWeatherDataForCity(e) {
             weatherInput.value = '';
         } else if (xhr.status === 404){
             locationError.innerHTML = `<h2>Not Found!</h2>`;
-            tempError.innerHTML = `<img src="assets/icons/OpenWeatherMap/null.svg">`;
-            conditionError.innerHTML = `<img src="assets/icons/OpenWeatherMap/null.svg">`;
+            tempError.innerHTML = `<img src="assets/icons/OpenWeatherMap/null.svg" alt="Error icon">`;
+            conditionError.innerHTML = `<img src="assets/icons/OpenWeatherMap/null.svg" alt="Error icon">`;
         } else {
             alert('Error loading OpenWeatherMap!'); 
         }
@@ -65,7 +65,7 @@ function updateWeatherInfo() {
     const condition = document.querySelector(".condition");
     location.innerHTML = `<h2>${city}</h2>`;
     temp.innerHTML = `<p>${Math.round(temperature)}<span>°c</span></p>`;
-    condition.innerHTML = `<img src="assets/icons/OpenWeatherMap/${icon}.svg">`;
+    condition.innerHTML = `<img src="assets/icons/OpenWeatherMap/${icon}.svg" alt="Weather condition icon">`;
 }
 
 weatherForm.addEventListener('submit', getWeatherDataForCity);

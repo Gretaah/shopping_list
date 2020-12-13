@@ -30,7 +30,7 @@ function updateMapAndGetNearbyLocations() {
     let marker = new google.maps.Marker({
         position: currentLocation,
         map: map,
-        icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+        icon: "https://maps.google.com/mapfiles/ms/micons/blue.png"
     });
     /* Show the marker location and popup */
     infoWindow.setPosition(currentLocation);
@@ -81,7 +81,7 @@ function createMarker(place) {
     let marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location,
-        icon: "http://maps.google.com/mapfiles/ms/micons/red.png"
+        icon: "https://maps.google.com/mapfiles/ms/micons/red.png"
     });
 
     google.maps.event.addListener(marker, 'click', function () {

@@ -48,9 +48,9 @@
                <div class="condition">
                   <img src="assets/icons/OpenWeatherMap/200.svg" alt="Weather Condition Icon">
                </div>
-               <form action="/weather" class="search-box" id="weather-form">
+               <form action="/weather" class="search-box" id="weather-form" label="weather-form">
                   <input id="userWeatherInput" class="input-field" type="text" name="weatherInput"
-                     placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="20">
+                     placeholder="Location..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="20" alt="weather-input">
                   <button class="weather-button submit-btn">Submit</button>
                </form>
             </div>
@@ -60,9 +60,9 @@
                <div class="shopping-frame">
                   <h2>Shopping List</h2>
                   <div class="form-container">
-                     <form action="/shopping-list" class="search-box" id="shoppingList">
+                     <form action="/shopping-list" class="search-box" id="shoppingList" label="shopping-form">
                         <input id="userInput" class="input-field" type="text" name="userInput"
-                           placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="20">
+                           placeholder="Add Item..." required="required" pattern="([A-z0-9À-ž\s]){2,}" maxlength="20" alt="list-input">
                         <button class="submit-button submit-btn">Submit</button>
                      </form>
                      <ul id="listItems">
@@ -75,10 +75,10 @@
 <!--                        Footer        -->
       <footer>
          <div class="links">
-            <a href="mailto:info@tommybratt.se" class="fas fa-envelope-open-text" target=”_blank”></a>
-            <a href="https://github.com/Gretaah" class="fab fa-github" target=”_blank”></a>
-            <a href="https://tommybratt.se/" class="fas fa-globe" target=”_blank”></a>
-            <a href="https://www.linkedin.com/in/tommy-b-001a391b4/" class="fab fa-linkedin" ></a>
+            <a href="mailto:info@tommybratt.se" class="fas fa-envelope-open-text" alt="Link to email" target=”_blank”></a>
+            <a href="https://github.com/Gretaah" class="fab fa-github" alt="Link to GitHub" target=”_blank”></a>
+            <a href="https://tommybratt.se/" class="fas fa-globe" alt="Link to website" target=”_blank”></a>
+            <a href="https://www.linkedin.com/in/tommy-b-001a391b4/" alt="Link to LinkedIn" class="fab fa-linkedin" ></a>
          </div>
       </footer>
    </body>
